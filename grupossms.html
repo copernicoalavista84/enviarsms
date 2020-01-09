@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>telefonos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <script>
+            $(document).ready(function () {
+                //array diccionario con telefonos.
+                var telefonosA = ["999999999", "88888888", "11111111"];
+                var telefonosB = ["999999999", "77777777", "11111111"];
+
+                //hacer click en el desplegable devuelve un array asociativo.
+                $(".grupos").click(function () {
+
+                    switch (this.value) {
+                        case '1':
+                            alert(telefonosA);
+                            break;
+
+                        case '2':
+                            alert(telefonosB);
+                            break;
+
+                    }
+                });
+            });
+
+        </script>
+
+        <select>
+            <option value="1" class="grupos">grupo1</option>
+            <option value="2" class="grupos">grupo2</option>
+            <option selected="">grupos a elegir</option>
+        </select>
+    </body>
+</html>
