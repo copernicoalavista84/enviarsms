@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="javascript/enviarSMS.js" ></script>
 
+
     </head>
     <body>
         <form method="POST">
@@ -27,5 +28,15 @@
 
 
         </form>
+
+        <script>
+
+            document.querySelector('#telefono').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    document.getElementById("telefono").value += ",";
+                }
+            });
+
+        </script>
     </body>
 </html>
